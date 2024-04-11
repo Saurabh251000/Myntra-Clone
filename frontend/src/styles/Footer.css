@@ -1,0 +1,164 @@
+
+.footerContainer{
+  position: relative;
+  z-index: 5;
+  padding: 30px 0px 40px 0px;
+  background: #FAFBFC;
+}
+.footer{
+  max-width: 1080px;
+  margin: auto;
+  min-width: 980px;
+}
+.desktop-genericInfo {
+  overflow: hidden;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.desktop-shopLinks {
+  width: 155px;
+  display: flex;
+  flex-direction: column;
+  /* vertical-align: top; */
+  padding-right: 20px;
+
+}
+.desktop-shopLinks  a,p{
+  color: #696b79;
+  /* display: block; */
+  font-size: 12px;
+  text-decoration: none;
+  padding-bottom: 10px;
+  cursor: pointer;
+  line-height: normal;
+}
+.desktop-gInfoTitle{
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+}
+
+.Keep{
+  width: 360px;
+}
+.desktop-downLinkContainer,.social-Media-Container, .desktop-section{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  color: #696b79;
+  font-size: 15px;
+}
+.desktop-downLinkContainer a{
+  width: 45%;
+}
+.desktop-downLinkContainer img{
+  height: 45px;
+}
+.social-Media-Container a{
+  color: #696b79;
+}
+.desktop-promises{
+  margin: 20px 0;
+  width: 250px;
+}
+
+
+/* Popular Search */
+
+.pSearchTitle-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+hr{
+  flex: 1 1;
+}
+.desktop-pSearchlinks{
+  font-size: 13px;
+  font-weight: 500;
+  color: #696b79;
+  line-height: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.desktop-fInfoSection{
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #696b79;
+}
+
+.desktop-fInfoSection a{
+  text-decoration: none;
+  color: #696b79;
+}
+.desktop-contact a{
+  color: blue;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* Address */
+.index-lcContainer{
+  margin: 40px 0 ;
+}
+.index-lcHeader {
+  font-size: 13px;
+  font-weight: 600;
+  color: #282c3f;
+}
+.index-lcInfoContainer{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+  color: #696b79;
+  align-items: end;
+}
+.index-lcAddress {
+  width: 70%;
+  display: inline-block;
+}
+.index-lcTelephone {
+  text-decoration: none;
+  /* color: black; */
+  font-weight: 700;
+}
+
+/* Gyan Container */
+
+.desktop-gyanContainer {
+  margin: 40px 0 ;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.desktop-gyanContainer, .desktop-gyanContainer p, .desktop-gyanContainer a{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #696b79;
+  line-height: 20px;
+
+}
+.desktop-gyanContainer li {
+  list-style-type: decimal;
+  margin: 1em 0;
+}
+.Title{
+  font-size: 14px;
+  font-weight: 700;
+  color: #696b79;
+}

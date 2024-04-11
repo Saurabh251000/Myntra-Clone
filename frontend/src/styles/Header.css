@@ -1,0 +1,166 @@
+
+.header{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; 
+  color: #282C3F;
+  box-shadow: 0 2px 5px 0 gray;
+  position: fixed;
+  z-index: 10;
+  background-color: #ffff;
+  top: 0;
+  left: 0;
+}
+.leftC{
+  height: 100%;
+  /* width: 680px; */
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: 55px;
+}
+.rightC{
+  display: flex;
+  justify-items: center;
+  height: 100%;
+  align-items: center;
+  flex: 1 0;
+  flex-wrap: nowrap;
+  margin-left: 100px;
+  justify-content: space-between;
+}
+.logoContainer{
+  height: 100%;
+  width: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.logo{
+  width: 100%;
+  cursor: pointer;
+}
+.Navbar,.name{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  letter-spacing: 1px;
+  z-index: 100;
+}
+.name{
+  height: 80px;
+  padding: 10px;
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  color: #282C3F;
+  cursor: pointer;
+  text-shadow:1px 1px 3px #c4bfbf;
+}
+.navItems{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.navItem{
+  width: 85%;
+  height: 300px;
+  z-index: 1;
+  background: #fff;
+  opacity: 100%;
+}
+.name:hover ~ .navItems {
+  display: flex;
+  justify-content: center;
+  background: rgb(0, 0, 0, 0.3);
+}
+.new{
+  font-size: 10px;
+  font-weight: 600;
+  color: crimson;
+  position:absolute;
+  left: 88%;
+  top: 33%;
+}
+
+.serach_query{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(240, 240, 240);
+  height: 40px;
+  flex: 1 1 300px;
+  border-radius: 5px;
+}
+.input_container,.input{
+  width: 100%;
+}
+.search{
+  padding: 0px 10px;
+  cursor: pointer;
+}
+.input{
+  all: unset;
+  height: 100%;
+  width: 100%;
+  padding: 3px;
+  flex: 1 1 300px;
+  font-size: 12px;
+}
+
+.serach_query:hover{
+  background-color: rgb(255, 255, 255);
+}
+
+.action{
+  height: 80px;
+  display: flex;
+  gap: 15px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.profile,.wishlist,.bag{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 8px;
+  position: relative;
+  
+}
+.action span{
+  font-size: 12px;
+  text-decoration: none;
+}
+.bag_item{
+  position:absolute;
+  top: 15%;
+  right:-2%;
+  color: white;
+  background-color: rgb(241, 89, 119);
+  padding: 0 6px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+.name:hover, .action_name:hover{
+  border-bottom: 3px solid rgb(255, 7, 193);
+}
+
+a{
+  text-decoration: none;
+  color: #29292c;
+}

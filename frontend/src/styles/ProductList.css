@@ -1,0 +1,23 @@
+.Container-items{
+  margin-top: 100px;
+  position: relative;
+}
+.listContainer,.wishlistContainer{
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.wishlistbody{
+  padding: 40px;
+}
+.mywishlist_Title{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.mywishlist_Title > span{
+  font-size: 14px;
+  font-weight: 500;
+}
