@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 function BagHeader() {
+  const { orderclicked } = useSelector((state) => state.fetchStatus);
   return (
     <div className="BagHeader">
       <div className="bagHeaderContainer">
@@ -11,8 +13,8 @@ function BagHeader() {
         </div>
 
         <div className="centerB">
-          <span className="bagB activeB">BAG</span>----------
-          <span>ADDRESS</span>----------<span>PAYMENT</span>
+          <span className={`${orderclicked === 0 ? "activeB" : ""} + {" "} + {"bagB"} `}>BAG</span>----------
+          <span className={`${orderclicked === 1 ? "activeB" : ""}`}>ADDRESS</span>----------<span className={`${orderclicked === 2 ? "activeB" : ""}`}>PAYMENT</span>
         </div>
 
         <div className="rightB">

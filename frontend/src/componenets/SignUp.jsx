@@ -40,10 +40,10 @@ function SignUp() {
           <label htmlFor="password" className='Label'>Password</label>
           <input type="password" name="password" id="password" required />
         </div>
-        <div className="LabelC">
+        {/* <div className="LabelC">
           <label htmlFor="dob" className='Label'>D.O.B</label>
           <input type="text" name="dob" id="dob" onFocus={(e) => (e.target.type = 'date')} onBlur={(e) => (e.target.type = 'text')} required />
-        </div>
+        </div> */}
         <div className="LabelC">
           <label htmlFor="mobile" className='Label'>Mobile No.</label>
           <input type="tel" name="mobile" id="mobile" pattern="[0-9]{10}" required />

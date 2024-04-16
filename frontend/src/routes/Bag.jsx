@@ -14,7 +14,6 @@ function Bag() {
     <>
       <BagHeader />
       {baglist.length === 0 ? <BagEmpty /> : <BagC baglist={baglist} />}
-
       {/* <Address /> */}
       <BagFooter />
     </>

@@ -7,6 +7,7 @@ function WishList() {
   const wishlist = useSelector((state) => state.wishlist);
   return (
     <div className="wishlistbody">
+      <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NyxM1BXWnykODX" async> </script> </form>
       <div className="mywishlist_Title">
         My Wishlist <span>({wishlist.length}) Items</span>
       </div>

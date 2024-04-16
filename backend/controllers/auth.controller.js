@@ -4,27 +4,28 @@ import generateTokenAndSetCookie from "../utils/generateToken.js";
 import { LoginSchema, SignupSchema } from "../types.js"
 
 export const signup = async (req, res) => {
-
+	console.log("request aaya");
 	const signupPayload = req.body;
+	// console.log(signupPayload);
 	const parsedPayload = SignupSchema.safeParse(signupPayload);
-
+	console.log(parsedPayload);
 	if (!parsedPayload.success) {
-    res.status(411).json({
-      msg: "You sent the wrong inputs",
-    });
-    return;
-  }
+		res.status(411).json({
+			msg: "You sent the wrong inputs",
+		});
+		return;
+	}
 
 	try {
-		const { fullName, email, password,mobileNumber} = req.body;
+		const { fullName, email, password, mobileNumber } = req.body;
 
-		const user = await User.findOne({ email },{mobileNumber});
-		
+		const user = await User.findOne({ email }, { mobileNumber });
+
 		if (user) {
-			if(user.email === email){
-			return res.status(400).json({ error: "Email already exists" });
+			if (user.email === email) {
+				return res.status(400).json({ error: "Email already exists" });
 			}
-			else{
+			else {
 				return res.status(400).json({ error: "Mobile number already exists" });
 			}
 		}
@@ -37,16 +38,16 @@ export const signup = async (req, res) => {
 			fullName,
 			email,
 			password: hashedPassword,
-      mobileNumber
+			mobileNumber
 		});
 
-	
+
 
 		if (newUser) {
 			// Generate JWT token here
 			generateTokenAndSetCookie(newUser._id, res);
 			await newUser.save();
-			
+
 			res.status(201).json({
 				_id: newUser._id,
 				fullName: newUser.fullName,
@@ -65,11 +66,11 @@ export const login = async (req, res) => {
 	const loginPayload = req.body;
 	const parsedpayload = LoginSchema.safeParse(loginPayload);
 
-	if(!parsedPayload.success){
+	if (!parsedpayload.success) {
 		res.status(411).json({
-      msg: "You sent the wrong inputs",
-    });
-    return;
+			msg: "You sent the wrong inputs",
+		});
+		return;
 	}
 
 	try {
@@ -84,10 +85,10 @@ export const login = async (req, res) => {
 		generateTokenAndSetCookie(user._id, res);
 
 		res.status(200).json({
-				_id: user._id,
-				fullName: user.fullName,
-				email: user.email,
-				mobileNumber:user.mobileNumber
+			_id: user._id,
+			fullName: user.fullName,
+			email: user.email,
+			mobileNumber: user.mobileNumber
 		});
 	} catch (error) {
 		console.log("Error in login controller", error.message);

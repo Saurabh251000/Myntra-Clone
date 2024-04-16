@@ -2,9 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const fetchStatusSlice = createSlice({
   name: "fetchStatus",
-  initialState:{
-    fetchDone : false,
-    currentlyFetching : false
+  initialState: {
+    fetchDone: false,
+    currentlyFetching: false,
+    orderclicked: 0,
   },
   reducers: {
     markFetchDone: (state) => {
@@ -15,7 +16,15 @@ const fetchStatusSlice = createSlice({
     },
     markFetchingFinished: (state) => {
       return state.currentlyFetching = false;
+    },
+    markOrderclicked: (state) => {
+      console.log("request aaya");
+      return {
+        ...state,
+        orderclicked: state.orderclicked + 1
+      };
     }
+
   }
 })
 
